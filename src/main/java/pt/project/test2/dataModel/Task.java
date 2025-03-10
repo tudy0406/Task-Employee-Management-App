@@ -6,7 +6,7 @@ public abstract sealed class Task permits SimpleTask, ComplexTask {
     protected String statusTask;
     protected String taskName;
 
-    public Task(int idTask, String statusTask, String taskName) {
+    public Task(int idTask, String taskName, String statusTask) {
         this.idTask = idTask;
         this.statusTask = statusTask;
         this.taskName = taskName;
@@ -28,6 +28,14 @@ public abstract sealed class Task permits SimpleTask, ComplexTask {
 
     public void setStatusTask(String statusTask) {
         this.statusTask = statusTask;
+    }
+
+    public String getTaskName() {
+        return taskName;
+    }
+
+    public void setTaskName(String taskName) {
+        this.taskName = taskName;
     }
 
     @Override

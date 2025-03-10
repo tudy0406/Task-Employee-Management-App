@@ -4,8 +4,8 @@ public non-sealed class SimpleTask extends Task{
     private int startHour;
     private int endHour;
 
-    public SimpleTask(int idTask, String statusTask, String statusName , int startHour, int endHour) {
-        super(idTask, statusTask, statusName);
+    public SimpleTask(int idTask, String taskName , String statusTask, int startHour, int endHour) {
+        super(idTask, taskName, statusTask);
         this.startHour = startHour;
         this.endHour = endHour;
     }
@@ -27,6 +27,11 @@ public non-sealed class SimpleTask extends Task{
     @Override
     public int estimateDuration(){
         return endHour - startHour;
+    }
+
+    @Override
+    public String toString(){
+        return "SimpleTask [ id: " + idTask + " name: " + taskName + " status: " + statusTask + " startHour: " + startHour + " endHour: " + endHour + " ]";
     }
 
 }

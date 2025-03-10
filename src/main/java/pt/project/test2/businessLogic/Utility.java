@@ -46,8 +46,8 @@ public class Utility {
         return employeeWork;
     }
 
-    public static void createSimpleTask(int idTask, String statusName, int startHour, int endHour) {
-        Task task = new SimpleTask(idTask, "Uncompleted", statusName, startHour, endHour);
+    public static void createSimpleTask(int idTask, String taskName, int startHour, int endHour) {
+        Task task = new SimpleTask(idTask, taskName, "Uncompleted", startHour, endHour);
         taskList.add(task);
     }
 
@@ -57,7 +57,7 @@ public class Utility {
     }
 
     public static void addEmployee(Employee employee) {
-        if(TaskManagement.getMap().putIfAbsent(employee, new ArrayList<>()) == null){
+        if(TaskManagement.getMap().putIfAbsent(employee, new ArrayList<>()) != null){
             throw new IllegalArgumentException("Employee already exists");
         }
     }
