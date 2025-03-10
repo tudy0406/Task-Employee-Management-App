@@ -1,6 +1,8 @@
 package pt.project.test2.dataModel;
 
-public class Employee{
+import java.io.Serializable;
+
+public class Employee implements Serializable {
 
     private int idEmployee;
     private String name;

@@ -1,5 +1,7 @@
 package pt.project.test2.businessLogic;
 
+import pt.project.test2.Configuration.Config;
+import pt.project.test2.dataAccess.ISerialization;
 import pt.project.test2.dataModel.*;
 
 import java.util.ArrayList;
@@ -7,7 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class TaskManagement {
+public class TaskManagement{
     private static Map<Employee, List<Task>> map = new HashMap<>();
 
     public static void assignTaskToEmployee(int idEmployee, Task task) throws IllegalAccessException {
@@ -31,20 +33,14 @@ public class TaskManagement {
     public static void modifyTaskStatus(int idEmployee, int idTask) {
         List<Task> tasks = map.get(TaskManagement.getEmployeeById(idEmployee));
 
-        if(tasks != null){
-                tasks
-                .stream()
-                .filter(task -> task.getIdTask() == idTask)
-                .findFirst()
-                        .ifPresent(task -> task.setStatusTask(
-                                task.getStatusTask().equals("Uncompleted") ? "Completed" : "Uncompleted"
-                        ));
-        }
-    }
-
-    public static void addEmployee(Employee employee) {
-        if(map.putIfAbsent(employee, new ArrayList<>()) == null){
-            throw new IllegalArgumentException("Employee already exists");
+        for(Task task : tasks){
+            if(task.getIdTask() == idTask){
+                if(task.getStatusTask().equals("Completed")){
+                    task.setStatusTask("Uncompleted");
+                }else{
+                    task.setStatusTask("Completed");
+                }
+            }
         }
     }
 
@@ -66,5 +62,4 @@ public class TaskManagement {
         }
         return null;
     }
-
 }
