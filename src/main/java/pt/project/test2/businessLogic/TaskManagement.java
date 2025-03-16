@@ -1,7 +1,5 @@
 package pt.project.test2.businessLogic;
 
-import pt.project.test2.Configuration.Config;
-import pt.project.test2.dataAccess.ISerialization;
 import pt.project.test2.dataModel.*;
 
 import java.util.ArrayList;
@@ -31,9 +29,7 @@ public class TaskManagement{
     }
 
     public static void modifyTaskStatus(int idEmployee, int idTask) {
-        List<Task> tasks = map.get(TaskManagement.getEmployeeById(idEmployee));
-
-        for(Task task : tasks){
+        for(Task task : map.get(getEmployeeById(idEmployee))){
             if(task.getIdTask() == idTask){
                 if(task.getStatusTask().equals("Completed")){
                     task.setStatusTask("Uncompleted");
@@ -42,6 +38,29 @@ public class TaskManagement{
                 }
             }
         }
+    }
+
+    //get all the employees which are working on a task
+    public static List<Employee> getAssignedEmployees(int idTask) {
+        List<Employee> assignedEmployees = new ArrayList<>();
+        for(Map.Entry<Employee, List<Task>> entry : map.entrySet()){
+            Employee employee = entry.getKey();
+            List<Task> tasks = entry.getValue();
+            for(Task task : tasks){
+                if(task.getType().equals("Complex")){
+                    for(Task taskTmp : ((ComplexTask) task).getTasks()){
+                        if(taskTmp.getIdTask() == idTask){
+                            assignedEmployees.add(employee);
+                        }
+                    }
+                }else{
+                    if(task.getIdTask() == idTask){
+                        assignedEmployees.add(employee);
+                    }
+                }
+            }
+        }
+        return assignedEmployees;
     }
 
 
@@ -54,8 +73,7 @@ public class TaskManagement{
     }
 
     private static Employee getEmployeeById(int idEmployee) {
-        List<Employee> employees = TaskManagement.map.keySet().stream().toList();
-        for(Employee employee : employees) {
+        for(Employee employee : map.keySet()) {
             if(employee.getIdEmployee() == idEmployee) {
                 return employee;
             }

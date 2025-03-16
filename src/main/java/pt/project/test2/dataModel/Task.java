@@ -1,15 +1,18 @@
 package pt.project.test2.dataModel;
 
-public abstract sealed class Task permits SimpleTask, ComplexTask {
+import java.io.Serializable;
+
+public abstract sealed class Task implements Serializable permits SimpleTask, ComplexTask{
 
     protected int idTask;
     protected String statusTask;
     protected String taskName;
-
-    public Task(int idTask, String taskName, String statusTask) {
+    protected String type;
+    public Task(int idTask, String taskName, String statusTask, String type) {
         this.idTask = idTask;
         this.statusTask = statusTask;
         this.taskName = taskName;
+        this.type = type;
     }
 
     public abstract int estimateDuration();
@@ -36,6 +39,14 @@ public abstract sealed class Task permits SimpleTask, ComplexTask {
 
     public void setTaskName(String taskName) {
         this.taskName = taskName;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     @Override

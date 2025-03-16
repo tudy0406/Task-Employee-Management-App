@@ -8,15 +8,16 @@ import pt.project.test2.dataModel.Task;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class Main {
-    public static void main(String[] args) throws IllegalAccessException {
-        Task task1 = new SimpleTask(1, "Doit", "Uncompleted",8, 18);
-        Task task2 = new SimpleTask(2,  "Make", "Uncompleted",8, 18);
-        Task task3 = new SimpleTask(3,  "Join", "Uncompleted",8, 80);
-        Task task4 = new SimpleTask(4,  "Start", "Uncompleted",8, 18);
-        Task task5 = new SimpleTask(5,  "Finish", "Uncompleted",8, 18);
-        Task task6 = new SimpleTask(6,  "Correcting", "Uncompleted",8, 50);
+    public static void main(String[] args) throws Exception {
+        /*Task task1 = new SimpleTask(1, "Doit", "Uncompleted","Simple", 8, 18);
+        Task task2 = new SimpleTask(2,  "Make", "Uncompleted","Simple",8, 18);
+        Task task3 = new SimpleTask(3,  "Join", "Uncompleted","Simple",8, 50);
+        Task task4 = new SimpleTask(4,  "Start", "Uncompleted","Simple",8, 18);
+        Task task5 = new SimpleTask(5,  "Finish", "Uncompleted","Simple",8, 18);
+        Task task6 = new SimpleTask(6,  "Correcting", "Uncompleted","Simple",8, 1000);
 
         Employee e1 = new Employee(1, "John Doe");
         Employee e2 = new Employee(2, "Jane Doe");
@@ -30,8 +31,12 @@ public class Main {
         tasks.add(task5);
 
         Utility.setTaskList(tasks);
-        Utility.createSimpleTask(task6.getIdTask(), task6.getTaskName(), 8, 50);
+        Utility.createTask(task6.getIdTask(), task6.getTaskName(), 8, 80);
+        List<Task> complexTask = new ArrayList<>();
+        complexTask.add(task1);
+        complexTask.add(task3);
 
+        Utility.createTask(7,"complex Task", complexTask);
         for(Task task : Utility.getTaskList()){
             System.out.println(task);
         }
@@ -45,15 +50,23 @@ public class Main {
         TaskManagement.assignTaskToEmployee(2,task3);
         TaskManagement.assignTaskToEmployee(2,task4);
         TaskManagement.assignTaskToEmployee(3,task5);
-        TaskManagement.assignTaskToEmployee(3,task6);
+        TaskManagement.assignTaskToEmployee(3,Utility.getTaskById(task6.getIdTask()));
 
-        TaskManagement.modifyTaskStatus(3, 6);
+        //TaskManagement.modifyTaskStatus(3, 6);
+        //TaskManagement.modifyTaskStatus(2, 3);
+
+
+
+        Utility.saveData();*/
+
+        /*Utility.loadData();
+        //TaskManagement.modifyTaskStatus(3, 6);
         TaskManagement.modifyTaskStatus(2, 3);
-
+        TaskManagement.modifyTaskStatus(1,1);
         for(Task task : Utility.getTaskList()){
             System.out.println(task);
         }
-
-        Utility.filterEmployees();
+        List<Employee> filteredEmployees = Utility.filterEmployees();
+        Utility.saveData();*/
     }
 }

@@ -20,7 +20,7 @@ public class ISerialization implements Serializable {
             out.writeObject(tasks);
             System.out.println("Data saved successfully!");
         } catch (IOException e) {
-            throw new Exception("Error saving data to file!");
+            throw new Exception(e.getCause());
         }
     }
 
@@ -31,7 +31,7 @@ public class ISerialization implements Serializable {
             List<Task> tasks = (List<Task>) in.readObject();
             return new Object[]{map, tasks};
         }catch (Exception e) {
-            throw new Exception("Error loading data from file!");
+            throw new Exception(e.getMessage());
         }
     }
 

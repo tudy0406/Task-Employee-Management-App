@@ -4,8 +4,8 @@ public non-sealed class SimpleTask extends Task{
     private int startHour;
     private int endHour;
 
-    public SimpleTask(int idTask, String taskName , String statusTask, int startHour, int endHour) {
-        super(idTask, taskName, statusTask);
+    public SimpleTask(int idTask, String taskName , String statusTask, String type, int startHour, int endHour) {
+        super(idTask, taskName, statusTask, type);
         this.startHour = startHour;
         this.endHour = endHour;
     }
@@ -31,7 +31,7 @@ public non-sealed class SimpleTask extends Task{
 
     @Override
     public String toString(){
-        return "SimpleTask [ id: " + idTask + " name: " + taskName + " status: " + statusTask + " startHour: " + startHour + " endHour: " + endHour + " ]";
+        return "SimpleTask [ id: " + idTask + " name: " + taskName +" type: "+ type +" status: " + statusTask + " startHour: " + startHour + " endHour: " + endHour + " ]";
     }
 
 }
