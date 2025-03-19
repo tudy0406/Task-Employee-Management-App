@@ -1,0 +1,115 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0" version="26.1.1">
+  <diagram name="Page-1" id="16g-O1zsrp_pjUMwv6w9">
+    <mxGraphModel dx="1088" dy="599" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3" value="Add Employee" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="520" y="13" width="125" height="128" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="Create Tasks&#xa;(Simple or Complex)" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="520" y="154" width="125" height="128" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="View Employees" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="520" y="294" width="125" height="128" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="View Tasks" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="516" y="434" width="125" height="128" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="Change Tasks Status" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="516" y="584" width="125" height="128" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="Add/Remove Tasks" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="516" y="734" width="125" height="128" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="Assign/Remove Tasks&#xa;to/from employees" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="520" y="884" width="125" height="128" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="Add employees" style="curved=1;startArrow=none;endArrow=block;entryX=0;entryY=0.5;exitX=0.75;exitY=0.1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="154eoqATwCiWdewSpsqZ-16" target="3" edge="1">
+          <mxGeometry x="0.0036" y="-15" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="390" y="20" />
+            </Array>
+            <mxPoint x="249" y="404" as="sourcePoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11" value="Create tasks" style="curved=1;startArrow=none;endArrow=block;entryX=0;entryY=0.49;exitX=0.75;exitY=0.1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="154eoqATwCiWdewSpsqZ-16" target="4" edge="1">
+          <mxGeometry x="0.0261" y="-28" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="390" y="181" />
+            </Array>
+            <mxPoint x="259" y="424" as="sourcePoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="12" value="View employees" style="curved=1;startArrow=none;endArrow=block;entryX=0;entryY=0.5;exitX=0.75;exitY=0.1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="154eoqATwCiWdewSpsqZ-16" target="5" edge="1">
+          <mxGeometry x="0.1004" y="-26" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="390" y="348" />
+            </Array>
+            <mxPoint x="279" y="444" as="sourcePoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="13" value="View tasks" style="curved=1;startArrow=none;endArrow=block;entryX=0;entryY=0.5;exitX=0.75;exitY=0.1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="154eoqATwCiWdewSpsqZ-16" target="6" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="267" y="508.46000000000004" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14" value="Change tasks status" style="curved=1;startArrow=none;endArrow=block;entryX=0;entryY=0.5;exitX=0.75;exitY=0.1;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;" parent="1" source="154eoqATwCiWdewSpsqZ-16" target="7" edge="1">
+          <mxGeometry x="0.0681" y="37" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="390" y="682" />
+            </Array>
+            <mxPoint x="250" y="474" as="sourcePoint" />
+            <mxPoint x="513" y="682" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="15" value="Add/remove tasks to/from a complex task" style="curved=1;startArrow=none;endArrow=block;entryX=-0.011;entryY=0.563;exitX=0.75;exitY=0.1;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="154eoqATwCiWdewSpsqZ-16" target="8" edge="1">
+          <mxGeometry x="0.1826" y="68" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="400" y="875" />
+            </Array>
+            <mxPoint x="264" y="444" as="sourcePoint" />
+            <mxPoint x="533" y="808" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="16" value="Assign tasks to employees" style="curved=1;startArrow=none;endArrow=block;entryX=0;entryY=0.5;exitX=0.75;exitY=0.1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="154eoqATwCiWdewSpsqZ-16" target="9" edge="1">
+          <mxGeometry x="0.0225" y="16" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="390" y="1060" />
+            </Array>
+            <mxPoint x="199" y="564" as="sourcePoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="154eoqATwCiWdewSpsqZ-16" value="&lt;div&gt;Manager&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="183" y="480" width="60" height="113" as="geometry" />
+        </mxCell>
+        <mxCell id="154eoqATwCiWdewSpsqZ-23" value="&lt;div&gt;VIew Statistics&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="516" y="1032" width="125" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="154eoqATwCiWdewSpsqZ-26" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.75;exitY=0.1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="226.22" y="491.2999999999997" as="sourcePoint" />
+            <mxPoint x="519.995147866741" y="1068.2599323465197" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="283" y="922" />
+              <mxPoint x="343" y="982" />
+              <mxPoint x="413" y="1042" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="154eoqATwCiWdewSpsqZ-27" value="&lt;div&gt;Filter Employees&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="154eoqATwCiWdewSpsqZ-26">
+          <mxGeometry x="0.16" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
