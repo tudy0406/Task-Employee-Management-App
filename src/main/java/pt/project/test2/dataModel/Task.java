@@ -5,8 +5,8 @@ import java.io.Serializable;
 public abstract sealed class Task implements Serializable permits SimpleTask, ComplexTask{
 
     protected int idTask;
-    protected String statusTask;
     protected String taskName;
+    protected String statusTask;
     protected String type;
     public Task(int idTask, String taskName, String statusTask, String type) {
         this.idTask = idTask;
@@ -16,6 +16,8 @@ public abstract sealed class Task implements Serializable permits SimpleTask, Co
     }
 
     public abstract int estimateDuration();
+
+    public abstract void checkStatus();
 
     public int getIdTask() {
         return idTask;

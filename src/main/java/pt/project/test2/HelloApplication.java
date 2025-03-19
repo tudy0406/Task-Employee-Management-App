@@ -4,11 +4,8 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import pt.project.test2.businessLogic.TaskManagement;
 import pt.project.test2.businessLogic.Utility;
-import pt.project.test2.dataModel.*;
 
-import java.io.IOException;
 import java.util.Objects;
 
 public class HelloApplication extends Application {

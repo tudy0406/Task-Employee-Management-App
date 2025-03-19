@@ -12,22 +12,32 @@ public non-sealed class ComplexTask extends Task{
     }
 
     public void addTask(Task task) {
-        for(Task t : tasks){
-            if(t.getIdTask() == task.getIdTask()){
-                throw new IllegalArgumentException("Task already exists");
-            }
+        if(tasks.contains(task)) {
+            throw new IllegalArgumentException("Task already exists");
         }
         tasks.add(task);
     }
 
-    public void deleteTask(Task task) {
+    public void removeTask(Task task) {
         tasks.remove(task);
+    }
+
+    @Override
+    public void checkStatus(){
+        for(Task task : tasks) {
+            if(task.getStatusTask().equals("Uncompleted")) {
+                setStatusTask("Uncompleted");
+                return;
+            }
+        }
+        setStatusTask("Completed");
+
     }
 
     @Override
     public int estimateDuration(){
         return tasks.stream()
-                .filter(task -> "Complete".equals(task.getStatusTask()))
+                .filter(task -> "Completed".equals(task.getStatusTask()))
                 .mapToInt(Task::estimateDuration)
                 .sum();
     }

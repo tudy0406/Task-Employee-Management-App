@@ -1,5 +1,6 @@
 package pt.project.test2.dataAccess;
 
+import pt.project.test2.configuration.Config;
 import pt.project.test2.dataModel.Task;
 import pt.project.test2.dataModel.Employee;
 
@@ -10,8 +11,8 @@ import java.util.Map;
 public class ISerialization implements Serializable {
     private final String fileName;
 
-    public ISerialization(String fileName) {
-        this.fileName = fileName;
+    public ISerialization() {
+        this.fileName = Config.getFileName();
     }
 
     public void saveData(Map<Employee, List<Task>> map, List<Task> tasks) throws Exception {

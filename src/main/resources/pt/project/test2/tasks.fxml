@@ -15,13 +15,14 @@
          </font></Text>
       <TableView id="taskTable" fx:id="tasksTable" accessibleRole="CHECK_MENU_ITEM" layoutX="50.0" layoutY="91.0" prefHeight="457.0" prefWidth="800.0">
         <columns>
-          <TableColumn id="taskIdColumn" fx:id="taskIdColumn" prefWidth="95.0" text="ID" />
-          <TableColumn id="taskNameColumn" fx:id="taskNameColumn" prefWidth="360.0000305175781" text="Task Name" />
-            <TableColumn id="taskTypeColumn" fx:id="taskTypeColumn" minWidth="0.0" prefWidth="172.80001831054688" text="Type" />
+          <TableColumn fx:id="taskIdColumn" prefWidth="95.0" text="ID" />
+          <TableColumn fx:id="taskNameColumn" prefWidth="360.0000305175781" text="Task Name" />
+            <TableColumn fx:id="taskTypeColumn" minWidth="0.0" prefWidth="172.80001831054688" text="Type" />
             <TableColumn fx:id="taskStatusColumn" prefWidth="173.60003662109375" text="Status" />
         </columns>
       </TableView>
-      <Button id="createTaskId" fx:id="createTaskBtn" layoutX="744.0" layoutY="58.0" mnemonicParsing="false" onMouseClicked="#onCreateTaskBtnClick" prefHeight="25.0" prefWidth="105.0" text="Create Task" />
+      <Button fx:id="createTaskBtn" layoutX="744.0" layoutY="58.0" mnemonicParsing="false" onMouseClicked="#onCreateTaskBtnClick" prefHeight="25.0" prefWidth="105.0" text="Create Task" />
       <Button fx:id="homeBtn" layoutX="744.0" layoutY="560.0" mnemonicParsing="false" onMouseClicked="#onHomeBtnClick" prefHeight="25.0" prefWidth="105.0" text="Home" />
+      <Button fx:id="refreshBtn" layoutX="797.0" layoutY="19.0" mnemonicParsing="false" onMouseClicked="#onRefreshBtnClick" text="Refresh" />
    </children>
 </AnchorPane>

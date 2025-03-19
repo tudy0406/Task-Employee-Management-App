@@ -14,7 +14,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import pt.project.test2.businessLogic.Utility;
-import pt.project.test2.dataModel.SimpleTask;
 import pt.project.test2.dataModel.Task;
 import java.io.IOException;
 
@@ -23,6 +22,7 @@ public class TasksController {
     public AnchorPane tasksPane;
     public Button createTaskBtn;
     public Button homeBtn;
+    public Button refreshBtn;// Unicode symbol
     public TableView<Task> tasksTable;
     public TableColumn<Task, Integer> taskIdColumn;
     public TableColumn<Task, String> taskNameColumn;
@@ -45,7 +45,6 @@ public class TasksController {
                 }
             }
         });
-
         loadTasksData();
     }
 
@@ -55,16 +54,6 @@ public class TasksController {
         tasksTable.setItems(tasksData);
     }
 
-    @FXML
-    protected void onCloseButtonClick() {
-        try {
-            Utility.saveData();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-        Stage stage = (Stage) tasksPane.getScene().getWindow();
-        stage.close();
-    }
 
     public void onCreateTaskBtnClick() {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/pt/project/test2/createTask.fxml"));
@@ -85,33 +74,20 @@ public class TasksController {
         primaryStage.show();
     }
 
-    public void onHomeBtnClick() {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/pt/project/test2/hello-view.fxml"));
-        Parent root = null;
-        try {
-            root = loader.load();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+    public void onHomeBtnClick() throws IOException {
+        ControllersController.onHomeBtnClick(tasksPane);
+    }
 
-        Scene scene = new Scene(root);
-        scene.setRoot(root);
-        Stage primaryStage = new Stage();
-        primaryStage.setTitle("Hello!");
-        primaryStage.setScene(scene);
-        primaryStage.initModality(Modality.NONE);
-
-        primaryStage.show();
-
-        ((Stage) tasksPane.getScene().getWindow()).close();
+    public void onRefreshBtnClick() {
+        loadTasksData();
     }
 
     private void viewTaskDetails(Task task) {
         try{
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/pt/project/test2/viewSpecificTask.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/pt/project/test2/taskDetails.fxml"));
             Parent root = loader.load();
 
-            ViewSpecificTaskController controller = loader.getController();
+            TaskDetailsController controller = loader.getController();
             controller.setTask(task);
             Stage stage = new Stage();
             stage.setTitle("View Task");
@@ -119,7 +95,7 @@ public class TasksController {
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.show();
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e.getMessage());
         }
     }
 }

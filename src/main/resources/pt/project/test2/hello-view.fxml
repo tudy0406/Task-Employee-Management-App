@@ -25,9 +25,5 @@
          <font>
             <Font size="15.0" />
          </font></Button>
-      <Button fx:id="assignTask" layoutX="46.0" layoutY="362.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="128.0" text="Assign Task">
-         <font>
-            <Font size="15.0" />
-         </font></Button>
    </children>
 </AnchorPane>

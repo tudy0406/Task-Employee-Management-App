@@ -25,6 +25,11 @@ public non-sealed class SimpleTask extends Task{
     }
 
     @Override
+    public void checkStatus(){
+        return;
+    }
+
+    @Override
     public int estimateDuration(){
         return endHour - startHour;
     }

@@ -8,7 +8,6 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import pt.project.test2.businessLogic.Utility;
 
 import java.io.IOException;
 
@@ -17,7 +16,6 @@ public class HelloController {
     public AnchorPane helloPanel;
     public Button employees;
     public Button tasks;
-    public Button assignTask;
 
     @FXML
     protected void onEmployeesButtonClick() throws IOException {
@@ -33,17 +31,6 @@ public class HelloController {
 
         primaryStage.show();
         ((Stage) helloPanel.getScene().getWindow()).close();
-    }
-
-    @FXML
-    protected void onCloseButtonClick() {
-        try {
-            Utility.saveData();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-        Stage stage = (Stage) helloPanel.getScene().getWindow();
-        stage.close();
     }
 
     @FXML
