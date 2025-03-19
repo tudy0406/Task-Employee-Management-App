@@ -38,7 +38,6 @@ public class ControllersController {
         alert.setTitle("Information");
         alert.setHeaderText(null);
         alert.setContentText(message);
-
         alert.showAndWait();
     }
 }

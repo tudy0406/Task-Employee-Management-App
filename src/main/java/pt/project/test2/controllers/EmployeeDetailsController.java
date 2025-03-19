@@ -92,6 +92,7 @@ public class EmployeeDetailsController {
             TaskManagement.removeTaskFromEmployee(employee.getIdEmployee(), t);
         }
         loadTasks();
+        setDetails();
         try{
             Utility.saveData();
         }catch(Exception e){
