@@ -1,100 +1,83 @@
 Task Management Application
-Project Overview
+📋 Project Description
 
-This is a JavaFX application developed for Fundamental Programming Techniques - Assignment 1.
-The project simulates a Task Management System for a software company, allowing project managers to:
+A JavaFX application for managing employees and tasks in a software company.
+Developed for the Fundamental Programming Techniques course.
+
+The project manager can:
 
     Add employees
 
-    Create and assign simple or complex tasks
-
-    View employee information and tasks
+    Create and assign Simple and Complex tasks
 
     Modify task statuses
 
-    View work duration and task completion statistics
+    View work durations and task statistics
+    All data is persisted using Java Serialization.
 
-All data is persisted using Java Serialization.
-Features
+🚀 Features
 
-    Employee Management: Add and view employees.
+    Add employees
 
-    Task Management: Create Simple or Complex tasks and assign them to employees.
+    Create simple or complex tasks
 
-    Task Status Update: Mark tasks as "Completed" or "Uncompleted."
+    Assign tasks to employees
 
-    Work Duration Estimation: Estimate how long an employee has worked based on completed tasks.
+    Mark tasks as completed or uncompleted
 
-    Statistics:
+    Calculate employee work duration
 
-        Filter employees with work duration over 40 hours, sorted by duration.
+    View task completion statistics
 
-        View the number of completed and uncompleted tasks for each employee.
+    Filter employees with work duration over 40 hours
 
-Technical Specifications
+🛠️ Technologies Used
 
-    JavaFX for the Graphical User Interface (GUI)
+    Java 23.0.2
 
-    Object-Oriented Design principles
+    JavaFX (GUI)
 
-    Layered Architectural Pattern
+    Java Serialization (Data Persistence)
 
-    Java Sealed Classes (Task as a sealed abstract class)
+    Composite Design Pattern
 
-    Composite Design Pattern (for complex tasks)
+    Sealed Classes
 
-    Serialization for data persistence
+    Layered Architecture
 
-    UML diagrams included (Use Case, Package, and Class diagrams)
+📂 Project Structure
 
-Project Structure
+    Employee
 
-    Employee class
-
-    Task sealed abstract class
+    Task (sealed abstract class)
 
         SimpleTask
 
         ComplexTask
 
-    TasksManagement class
+    TasksManagement
 
-    Utility class
+    Utility
 
-    GUI classes for user interaction
+    GUI (for user interactions)
 
-How to Run
-
-    Clone the repository from GitHub.
-
-    Open the project in IntelliJ IDEA or another Java IDE.
-
-    Build and run the project.
-
-    Use the GUI to manage employees and tasks.
-
-UML Diagrams
-
-Diagrams are provided in the project as .drawio files:
+📈 UML Diagrams
 
     Use Case Diagram
 
     Package Diagram
 
     Class Diagram
+    (Diagrams are included in .drawio format.)
 
-Requirements Fulfilled
+📦 How to Run
 
-    Object-oriented programming
+    Clone the repository:
 
-    JavaFX GUI
+git clone https://github.com/tudy0406/Task-Management-Application.git
 
-    Serialization for persistence
+Open the project in IntelliJ IDEA or another Java IDE.
 
-    Sealed and composite design patterns
+Build and run the application.
 
-    Java coding conventions
-
-    Class/method size restrictions
-
-    UML diagrams
+Use the GUI to manage employees and tasks!
